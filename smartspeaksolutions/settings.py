@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-ft#3=%jlu9qp@)bwq)x@ay=@jcm0k&fgfz+g-!&c(r7o&%0b)t'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['8000-mariapadilha32-smartspea-ax07w8xzpo.us1.codeanyapp.com']
 
@@ -43,6 +44,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.apple',
     'allauth.socialaccount.providers.facebook',
     'allauth.socialaccount.providers.google',
+    'home',
 ]
 
 MIDDLEWARE = [
@@ -61,7 +63,10 @@ ROOT_URLCONF = 'smartspeaksolutions.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            os.path.join(BASE_DIR, 'templates'),
+            os.path.join(BASE_DIR, 'templates', 'allauth'),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
