@@ -1,9 +1,21 @@
+:root{
+    --color-gold: #FFD700;
+    --color-orange: orange;
+    --color-bg-head: #060644;
+    --color-bg-head-light: #191981;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
 html {
     height: 100%;
 }
 
 body {
-    background: url('/media/logofave.png') no-repeat center center fixed;
+    background: url('/media/speechfather.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
@@ -11,12 +23,23 @@ body {
 }
 
 .navy-bg {
-    background-color: navy;
+    background-color: #060644 !important;
+    display:flex !important;
+    width: 100vw !important;
   }
   
-  .nav-link {
+.nav-link {
     color: gold !important;
-  }
+}
+
+.background-bg-head {
+    background-color:var(--color-bg-head);
+}
+
+.background-bg-head:hover {
+ background-color: var(--color-bg-head-light);
+ }
+
 /* from Bulma */
 .icon {
     align-items: center;
@@ -30,6 +53,10 @@ body {
     text-transform: uppercase;
 }
 
+.text-gold {
+    color: var(--color-gold);
+}
+
 .main-logo-link {
     width: fit-content;
 }
@@ -38,6 +65,11 @@ body {
     background: black;
     color: white;
     min-width: 260px;
+}
+
+.btn-gold {
+    background: var(--color-orange);
+    color: white;
 }
 
 .btn-black {
@@ -55,12 +87,25 @@ body {
     color: white;
 }
 
+.btn-contact {
+    background-color: var(--color-bg-head);
+    border-radius: 15px;
+}
+
 .text-black {
     color: #000 !important;
 }
 
 .border-black {
     border: 1px solid black !important;
+}
+
+.border-gray {
+    border: 1px solid gray !important;
+}
+
+.text-blue {
+    color: var(--color-bg-head-light);
 }
 
 

@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-ft#3=%jlu9qp@)bwq)x@ay=@jcm0k&fgfz+g-!&c(r7o&%0b)t'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['8000-mariapadilha32-smartspea-ax07w8xzpo.us1.codeanyapp.com']
+ALLOWED_HOSTS = ['8000-mariapadilha32-smartspea-ax07w8xzpo.us1.codeanyapp.com', 'localhost']
 
 
 # Application definition
