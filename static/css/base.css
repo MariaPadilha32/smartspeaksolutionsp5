@@ -22,6 +22,10 @@ body {
     font-family: 'Lato';
 }
 
+.bg-none {
+    background-color: none;
+}
+
 .navy-bg {
     background-color: #060644 !important;
     display:flex !important;
