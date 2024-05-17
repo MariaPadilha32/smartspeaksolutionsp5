@@ -27,21 +27,41 @@ body {
 }
 
 .navy-bg {
-    background-color: #060644 !important;
-    display:flex !important;
-    width: 100vw !important;
+    background-color: #060644;
+    display:flex;
+    width: 100vw;
   }
   
 .nav-link {
     color: gold !important;
 }
 
+.navbar-toggler-icon {
+    background-color: var(--color-gold);
+}
+
 .background-bg-head {
     background-color:var(--color-bg-head);
 }
 
-.background-bg-head:hover {
- background-color: var(--color-bg-head-light);
+.background-bg-head-btn {
+    background-color:var(--color-bg-head);
+}
+
+.background-bg-head-btn:hover {
+    background-color: var(--color-bg-head-light);
+ }
+
+ .item-dropdown {
+    width: 219px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .dropdown-item {
+    color: var(--color-gold);
+    background-color: var(--color-bg-head);
  }
 
 /* from Bulma */
@@ -58,7 +78,7 @@ body {
 }
 
 .text-gold {
-    color: var(--color-gold);
+    color: var(--color-gold)  !important;
 }
 
 .main-logo-link {
