@@ -132,6 +132,15 @@ body {
     color: var(--color-bg-head-light);
 }
 
+footer {
+    width: 100vw;
+    height: 50px;
+    position: fixed;
+    bottom: 0;
+    background-color: var(--color-bg-head);
+    color: var(--color-gold);
+}
+
 
 /* -------------------------------- Media Queries */
 
