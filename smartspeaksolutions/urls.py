@@ -24,3 +24,8 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     path('', include('home.urls')),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+
+handler404 = views.custom_404_view
+handler500 = views.custom_500_view
+handler403 = views.custom_403_view
