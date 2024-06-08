@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block corecss %}{% endblock %}
+
+{% block corejs %}{% endblock %}
+
+{% block extra_title %}Eulogy{% endblock %}
+
+{% block content %}
+<div class="description">
+    <div class="title-description">
+        <span class="value-title-description">Eulogy</span>
+    </div>
+    <div class="image-description">
+        <div class="picture-description">
+            <img src="{% static 'eulogy.jpg' %}" alt="" class="value-picture-description">
+        </div>
+        <div class="controls-description">
+            <button class="btn btn-buy"></button>
+        </div>
+    </div>
+    <div class="detail-description">
+        <p class="value-detail-description"></p>
+    </div>
+    <div class="form-description">
+        <form action="#" method="post" class="frm-buy">
+            <input type="hidden" name="page" value="eulogy">
+            <div class="ln-form-description">
+                <div class="field-description-form-buy">
+                    <label for="text-name" class="lb-form-buy">Name</label>
+                </div>
+                <div class="field-input-form-buy">
+                    <input type="text" name="name" id="text-name" class="input-form-buy">
+                </div>
+            </div>
+            <div class="ln-form-description">
+                <div class="field-description-form-buy">
+                    <label for="text-email" class="lb-form-buy">Email Address</label>
+                </div>
+                <div class="field-input-form-buy">
+                    <input type="email" name="email" id="text-email" class="input-form-buy">
+                </div>
+            </div>
+            <input type="submit" value="" class="btn btn-buy">
+        </form>
+    </div>
+</div>
+
+{% endblock %}

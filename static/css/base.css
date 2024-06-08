@@ -15,7 +15,10 @@ html {
 }
 
 body {
-    background: url('/media/speechfather.jpg') no-repeat center center fixed;
+    background-image: url('../images/speechfather.jpg'); 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
     background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
@@ -163,6 +166,82 @@ footer {
 .bg-error {
     background-color: #fff;
   }
+
+.logo-icon{
+    width: 50px;
+}
+
+.description {
+    max-width: none;
+}
+
+.title-description {
+    max-width: none;
+}
+
+.value-title-description {
+    max-width: none;
+}
+
+.image-description {
+    max-width: none;
+}
+
+.picture-description{
+    max-width: none;
+}
+
+.value-picture-description {
+    max-width: none;
+}
+
+.controls-description {
+    max-width: none;
+}
+
+.btn-buy {
+    max-width: none;
+}
+
+.detail-description {
+    max-width: none;
+}
+
+.value-detail-description {
+    max-width: none;
+}
+
+.form-description {
+    max-width: none;
+}
+
+.frm-buy {
+    max-width: none;
+}
+
+.ln-form-description {
+    max-width: none;
+}
+
+.field-description-form-buy {
+    max-width: none;
+}
+
+.lb-form-buy {
+    max-width: none;
+}
+
+.field-input-form-buy {
+    max-width: none;
+}
+
+.input-form-buy {
+    max-width: none;
+}
+
+.ln-form-description {
+    max-width: none;
+}
 
 /* -------------------------------- Media Queries */
 
