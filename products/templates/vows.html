@@ -4,30 +4,30 @@
 
 {% block corejs %}{% endblock %}
 
-{% block extra_title %}Eulogy{% endblock %}
+{% block extra_title %}Wedding Vows{% endblock %}
 
 {% block content %}
 <div class="description">
     <div class="title-description">
-        <span class="value-title-description">Eulogy</span>
+        <span class="value-title-description">Wedding Vows</span>
     </div>
     <div class="image-description">
         <div class="picture-description">
-            <img src="{% static 'eulogy.jpg' %}" alt="Person reading an eulogy" class="value-picture-description">
+            <img src="{% static 'vows.jpg' %}" alt="Bride reading her vows." class="value-picture-description">
         </div>
         <div class="controls-description">
             <button class="btn btn-buy"></button>
         </div>
     </div>
     <div class="detail-description">
-        <p class="value-detail-description">Honoring a loved one’s memory with a heartfelt eulogy can be a 
-            challenging task. Our eulogy writing services offer compassionate and personalized support to 
-            help you express your thoughts and emotions eloquently. We work closely with you to create a 
-            tribute that celebrates their life and legacy, providing comfort and solace to those in mourning.
+        <p class="value-detail-description">Your wedding vows are a deeply personal promise to your partner, 
+            reflecting your unique journey together. Our wedding vow writing service helps you articulate your love, 
+            commitment, promises and dreams for the future. We craft vows that are heartfelt, meaningful, and perfectly 
+            tailored to your relationship, ensuring your words resonate on your special day.
         </p>
-        <p class="value-detail-description">- Eulogies will be delivered within 24 hours.
+        <p class="value-detail-description">- Vows will be delivered within 5 working days.
             <br>
-            - You will have the chance of 1 (one) review if necessary.
+            - You will have the chance of 2 (two) reviews if necessary.
             <br>
             -Prices may vary depending on the lenght of the speech.
             <br>
@@ -42,34 +42,24 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <th scope="row">5 - 6 minutes</th>
+                    <th scope="row">2 minutes</th>
                     <td>€100,00</td>
                   </tr>
                   <tr>
-                    <th scope="row">7 - 8 minutes</th>
+                    <th scope="row">3 minutes</th>
                     <td>€135,00</td>
                   </tr>
                   <tr>
-                    <th scope="row">9 - 10 minutes</th>
+                    <th scope="row">4 minutes</th>
                     <td>€165,00</td>
-                  </tr>
-                    <th scope="row">11 - 12 minutes</th>
-                    <td>€195,00</td>
-                  </tr>
-                    <th scope="row">13 - 14 minutes</th>
-                    <td>€225,00</td>
-                  </tr>
-                    <th scope="row">15 minutes</th>
-                    <td>€250,00</td>
-                  </tr>
                 </tbody>
               </table>
         </div>
     </div>
     <div class="form-description">
-        <form action="{% url 'eulogy' %}" method="post" class="form-buy">
+        <form action="{% url 'vows' %}" method="post" class="form-buy">
             {% csrf_token %}
-            <input type="hidden" name="page" value="eulogy">
+            <input type="hidden" name="page" value="vows">
             <div class="ln-form-description">
                 <div class="field-description-form-buy">
                     <label for="text-name" class="lb-form-buy">Name:</label>
@@ -88,10 +78,19 @@
             </div>
             <div class="ln-form-description">
                 <div class="field-description-form-buy">
-                    <label for="event-date" class="lb-form-buy">Event Date:</label>
+                    <label for="partner-name" class="lb-form-buy">Partner's name:</label>
                 </div>
                 <div class="field-input-form-buy">
-                    <input type="date" name="event_date" id="event-date" class="input-form-buy" required>
+                    <input type="text" name="partner_name" id="partner-name" class="input-form-buy" required>
+                </div>
+            </div>
+            <div class="ln-form-description">
+                <div class="field-description-form-buy">
+                    <label for="wedding-date" class="lb-form-buy">Wedding Date:</label>
+                </div>
+                <div class="field-input-form-buy">
+                    <input type="date" name="wedding_date" id="wedding-date" class="input-form-buy" required>
+                    <p class="text-gold">*Delivery within 5 working days and 2 working days for each review.</p>
                 </div>
             </div>
             <div class="ln-form-description">
@@ -100,56 +99,18 @@
                 </div>
                 <div class="field-input-form-buy">
                     <select name="speech_lenght" id="speech_lenght" class="option-form-buy" required>
-                        <option value="optionone">5 to 6 minutes €100,00</option>
-                        <option value="optiontwo">7 to 8 minutes €135,00</option>
-                        <option value="optionthree">9 to 10 minutes €165,00</option>
-                        <option value="optionfour">11 to 12 minutes €195,00</option>
-                        <option value="optionfive">13 to 14 minutes €225,00</option>
-                        <option value="ptionsix">15 minutes €250,00</option>
+                        <option value="optionone">2 minutes €100,00</option>
+                        <option value="optiontwo">3 minutes €135,00</option>
+                        <option value="optionthree">4 minutes €165,00</option>
                     </select>
                 </div>
             </div>
             <div class="ln-form-description">
                 <div class="field-description-form-buy">
-                    <label for="preference_narrative" class="option-form-buy">Preference:</label>
+                    <label for="history" class="lb-form-buy">Relationship history</label>
                 </div>
                 <div class="field-input-form-buy">
-                    <select name="preference_narrative" id="preference_narrative" class="input-form-buy" required>
-                        <option value="first">First-person narrative</option>
-                        <option value="third">Third-person narrative</option>
-                    </select>
-                </div>
-            </div>
-            <div class="ln-form-description">
-                <div class="field-description-form-buy">
-                    <label for="relationship" class="lb-form-buy">What is your relationship to the loved one:</label>
-                </div>
-                <div class="field-input-form-buy">
-                    <input type="text" name="relationship" id="relationship" class="input-form-buy" required>
-                </div>
-            </div>
-            <div class="ln-form-description">
-                <div class="field-description-form-buy">
-                    <label for="mentions" class="lb-form-buy">Important people to mention:</label>
-                </div>
-                <div class="field-input-form-buy">
-                    <input type="text" name="mentions" id="mentions" class="input-form-buy">
-                </div>
-            </div>
-            <div class="ln-form-description">
-                <div class="field-description-form-buy">
-                    <label for="thanks" class="lb-form-buy">Special thanks:</label>
-                </div>
-                <div class="field-input-form-buy">
-                    <input type="text" name="thanks" id="thanks" class="input-form-buy">
-                </div>
-            </div>
-            <div class="ln-form-description">
-                <div class="field-description-form-buy">
-                    <label for="additonal_preferences" class="lb-form-buy">Any additional preferences:</label>
-                </div>
-                <div class="field-input-form-buy">
-                    <input type="text" name="additonal_preferences" id="additonal_preferences" class="input-form-buy">
+                    <input type="text" name="history" id="history" class="input-form-buy">
                 </div>
             </div>
             <div class="ln-form-description">
@@ -174,14 +135,6 @@
                 </div>
                 <div class="field-input-form-buy">
                     <input type="text" name="ages" id="ages" class="input-form-buy">
-                </div>
-            </div>
-            <div class="ln-form-description">
-                <div class="field-description-form-buy">
-                    <label for="relationship_audience" class="lb-form-buy">Your relationship to the audience(approximately):</label>
-                </div>
-                <div class="field-input-form-buy">
-                    <input type="text" name="relationship_audience" id="relationship_audience" class="input-form-buy">
                 </div>
             </div>
             <div class="ln-form-description">
