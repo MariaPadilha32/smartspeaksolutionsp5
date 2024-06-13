@@ -191,15 +191,7 @@ footer {
     max-width: none;
 }
 
-.value-picture-description {
-    max-width: none;
-}
-
 .controls-description {
-    max-width: none;
-}
-
-.btn-buy {
     max-width: none;
 }
 
@@ -207,7 +199,19 @@ footer {
     max-width: none;
 }
 
+.value-picture-description {
+    max-width: none;
+}
+
+.pricetable{
+    max-width: none;
+}
+
 .value-detail-description {
+    max-width: none;
+}
+
+.btn-buy {
     max-width: none;
 }
 
@@ -215,7 +219,7 @@ footer {
     max-width: none;
 }
 
-.frm-buy {
+.form-buy {
     max-width: none;
 }
 
@@ -240,6 +244,14 @@ footer {
 }
 
 .ln-form-description {
+    max-width: none;
+}
+
+.option-form-buy{
+    max-width: none;
+}
+
+.checkbox-form-buy{
     max-width: none;
 }
 

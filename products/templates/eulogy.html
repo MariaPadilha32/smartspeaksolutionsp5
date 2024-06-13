@@ -26,12 +26,48 @@
             tribute that celebrates their life and legacy, providing comfort and solace to those in mourning.
         </p>
         <p class="value-detail-description">- Eulogies will be delivered within 24 hours.
+            <br>
             - You will have the chance of 1 (one) review if necessary.
+            <br>
             -Prices may vary depending on the lenght of the speech.
+            <br>
         </p>
+        <div class="pricetable">
+            <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">Lenght</th>
+                    <th scope="col">Price</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">5 - 6 minutes</th>
+                    <td>€100,00</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">7 - 8 minutes</th>
+                    <td>€135,00</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">9 - 10 minutes</th>
+                    <td>€165,00</td>
+                  </tr>
+                    <th scope="row">11 - 12 minutes</th>
+                    <td>€195,00</td>
+                  </tr>
+                    <th scope="row">13 - 14 minutes</th>
+                    <td>€225,00</td>
+                  </tr>
+                    <th scope="row">15 minutes</th>
+                    <td>€250,00</td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
     </div>
     <div class="form-description">
-        <form action="{% url 'eulogy' %}" method="post" class="frm-buy">
+        <form action="{% url 'eulogy' %}" method="post" class="form-buy">
             {% csrf_token %}
             <input type="hidden" name="page" value="eulogy">
             <div class="ln-form-description">
@@ -63,7 +99,7 @@
                     <label for="speech_length" class="lb-form-buy">Length of the Speech:</label>
                 </div>
                 <div class="field-input-form-buy">
-                    <select name="speech_length" id="speech_length" class="input-form-buy">
+                    <select name="speech_length" id="speech_length" class="option-form-buy">
                         <option value="optionone">5 to 6 minutes €100,00</option>
                         <option value="optiontwo">7 to 8 minutes €135,00</option>
                         <option value="optionthree">9 to 10 minutes €165,00</option>
@@ -75,7 +111,7 @@
             </div>
             <div class="ln-form-description">
                 <div class="field-description-form-buy">
-                    <label for="preference_narrative" class="lb-form-buy">Preference:</label>
+                    <label for="preference_narrative" class="option-form-buy">Preference:</label>
                 </div>
                 <div class="field-input-form-buy">
                     <select name="preference_narrative" id="preference_narrative" class="input-form-buy">
@@ -152,7 +188,7 @@
                 <div class="field-description-form-buy">
                     <label class="lb-form-buy">Tone of the speech:</label>
                 </div>
-                <div class="field-input-form-buy">
+                <div class="checkbox-form-buy">
                     <input type="checkbox" name="tone_emotional" value="emotional" id="tone_emotional">
                     <label for="tone_emotional">Emotional</label><br>
                     
