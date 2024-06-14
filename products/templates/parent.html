@@ -4,26 +4,26 @@
 
 {% block corejs %}{% endblock %}
 
-{% block extra_title %}Spouse's speech{% endblock %}
+{% block extra_title %}Parent of the Groom/Bride Speeches{% endblock %}
 
 {% block content %}
 <div class="description">
     <div class="title-description">
-        <span class="value-title-description">Spouse's speech</span>
+        <span class="value-title-description">Parent of the Groom/Bride Speeches</span>
     </div>
     <div class="image-description">
         <div class="picture-description">
-            <img src="{% static 'manspeech.jpg' %}" alt="A man reading a speech" class="value-picture-description">
+            <img src="{% static 'father2.jpg' %}" alt="A man reading a speech" class="value-picture-description">
         </div>
         <div class="controls-description">
             <button class="btn btn-buy"></button>
         </div>
     </div>
     <div class="detail-description">
-        <p class="value-detail-description">Your speech is an opportunity to express gratitude, share your love 
-            story, and thank those who have supported you. Our service helps you craft a speech that is sincere, engaging,
-             and tailored to your personality. We ensure your words resonate with your guests and add to the joy of your 
-             wedding celebration.
+        <p class="value-detail-description">As a parent or parental figure of the groom or bride, 
+            your speech is a momentous part of the wedding celebration. Our speechwriting service 
+            helps you convey your pride, joy, and heartfelt wishes for the couple’s future. We create 
+            speeches that are touching, memorable, and a true reflection of your sentiments on this special day.
         </p>
         <p class="value-detail-description">- Speech will be delivered within 5 working days.
             <br>
@@ -67,9 +67,9 @@
         </div>
     </div>
     <div class="form-description">
-        <form action="{% url 'spouse' %}" method="post" class="form-buy">
+        <form action="{% url 'parent' %}" method="post" class="form-buy">
             {% csrf_token %}
-            <input type="hidden" name="page" value="spouse">
+            <input type="hidden" name="page" value="parent">
             <div class="ln-form-description">
                 <div class="field-description-form-buy">
                     <label for="text-name" class="lb-form-buy">Name:</label>
@@ -88,10 +88,27 @@
             </div>
             <div class="ln-form-description">
                 <div class="field-description-form-buy">
-                    <label for="partner-name" class="lb-form-buy">Partner's name:</label>
+                    <label for="related" class="lb-form-buy">Related to:</label>
                 </div>
                 <div class="field-input-form-buy">
-                    <input type="text" name="partner_name" id="partner-name" class="input-form-buy" required>
+                    <input type="text" name="related" id="related" class="input-form-buy" required>
+                    <p class="text-gold">*Related to the bride or groom.</p>
+                </div>
+            </div>
+            <div class="ln-form-description">
+                <div class="field-description-form-buy">
+                    <label for="relationship" class="lb-form-buy">Relationship:</label>
+                </div>
+                <div class="field-input-form-buy">
+                    <input type="text" name="relationship" id="relationship" class="input-form-buy" required>
+                </div>
+            </div>
+            <div class="ln-form-description">
+                <div class="field-description-form-buy">
+                    <label for="couple-name" class="lb-form-buy">Couple getting married:</label>
+                </div>
+                <div class="field-input-form-buy">
+                    <input type="text" name="couple_name" id="couple-name" class="input-form-buy" required>
                 </div>
             </div>
             <div class="ln-form-description">
