@@ -1,0 +1,243 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block corecss %}{% endblock %}
+
+{% block corejs %}{% endblock %}
+
+{% block extra_title %}Wedding Party Speeches{% endblock %}
+
+{% block content %}
+<div class="description">
+    <div class="title-description">
+        <span class="value-title-description">Wedding Party Speeches</span>
+    </div>
+    <div class="image-description">
+        <div class="picture-description">
+            <img src="{% static 'bridesmaid.jpg' %}" alt="A bridesmaid reading a speech" class="value-picture-description">
+        </div>
+        <div class="controls-description">
+            <button class="btn btn-buy"></button>
+        </div>
+    </div>
+    <div class="detail-description">
+        <p class="value-detail-description">Standing by your loved ones on their wedding day is an honor that
+             deserves the perfect words. Whether you're part of the wedding party as a groomsman, bridesmaid, 
+             maid of honor, or best man, our speechwriting service ensures your speech is engaging, heartfelt, 
+             and memorable. We help you share your cherished memories and well-wishes in a way that captivates 
+             the audience and celebrates the couple.
+        </p>
+        <p class="value-detail-description">- Speech will be delivered within 5 working days.
+            <br>
+            - You will have the chance of 2 (two) reviews if necessary.
+            <br>
+            -Prices may vary depending on the lenght of the speech.
+            <br>
+        </p>
+        <div class="pricetable">
+            <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">Lenght</th>
+                    <th scope="col">Price</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">5 - 6 minutes</th>
+                    <td>€100,00</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">7 - 8 minutes</th>
+                    <td>€135,00</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">9 - 10 minutes</th>
+                    <td>€165,00</td>
+                  </tr>
+                    <th scope="row">11 - 12 minutes</th>
+                    <td>€195,00</td>
+                  </tr>
+                    <th scope="row">13 - 14 minutes</th>
+                    <td>€225,00</td>
+                  </tr>
+                    <th scope="row">15 minutes</th>
+                    <td>€250,00</td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+    <div class="form-description">
+        <form action="{% url 'parent' %}" method="post" class="form-buy">
+            {% csrf_token %}
+            <input type="hidden" name="page" value="parent">
+            <div class="ln-form-description">
+                <div class="field-description-form-buy">
+                    <label for="text-name" class="lb-form-buy">Name:</label>
+                </div>
+                <div class="field-input-form-buy">
+                    <input type="text" name="name" id="text-name" class="input-form-buy" required>
+                </div>
+            </div>
+            <div class="ln-form-description">
+                <div class="field-description-form-buy">
+                    <label for="text-email" class="lb-form-buy">Email Address:</label>
+                </div>
+                <div class="field-input-form-buy">
+                    <input type="email" name="email" id="text-email" class="input-form-buy" required>
+                </div>
+            </div>
+            <div class="ln-form-description">
+                <div class="field-description-form-buy">
+                    <label for="couple-name" class="lb-form-buy">Couple getting married:</label>
+                </div>
+                <div class="field-input-form-buy">
+                    <input type="text" name="couple_name" id="couple-name" class="input-form-buy" required>
+                </div>
+            </div>
+            <div class="ln-form-description">
+                <div class="field-description-form-buy">
+                    <label for="wedding-party" class="lb-form-buy">Your participation on the wedding:</label>
+                </div>
+                <div class="field-input-form-buy">
+                    <input type="text" name="wedding_party" id="wedding-party" class="input-form-buy" required>
+                </div>
+            </div>
+            <div class="ln-form-description">
+                <div class="field-description-form-buy">
+                    <label for="wedding-date" class="lb-form-buy">Wedding Date:</label>
+                </div>
+                <div class="field-input-form-buy">
+                    <input type="date" name="wedding_date" id="wedding-date" class="input-form-buy" required>
+                    <p class="text-gold">*Delivery within 5 working days and 2 working days for each review.</p>
+                </div>
+            </div>
+            <div class="ln-form-description">
+                <div class="field-description-form-buy">
+                    <label for="speech_lenght" class="lb-form-buy">Lenght of the Speech:</label>
+                </div>
+                <div class="field-input-form-buy">
+                    <select name="speech_lenght" id="speech_lenght" class="option-form-buy" required>
+                        <option value="optionone">5 to 6 minutes €100,00</option>
+                        <option value="optiontwo">7 to 8 minutes €135,00</option>
+                        <option value="optionthree">9 to 10 minutes €165,00</option>
+                        <option value="optionfour">11 to 12 minutes €195,00</option>
+                        <option value="optionfive">13 to 14 minutes €225,00</option>
+                        <option value="ptionsix">15 minutes €250,00</option>
+                    </select>
+                </div>
+            </div>
+            <div class="ln-form-description">
+                <div class="field-description-form-buy">
+                    <label for="history" class="lb-form-buy">Relationship history:</label>
+                </div>
+                <div class="field-input-form-buy">
+                    <input type="text" name="history" id="history" class="input-form-buy">
+                </div>
+            </div>
+            <div class="ln-form-description">
+                <div class="field-description-form-buy">
+                    <label for="mentions" class="lb-form-buy">Important people to mention:</label>
+                </div>
+                <div class="field-input-form-buy">
+                    <input type="text" name="mentions" id="mentions" class="input-form-buy">
+                </div>
+            </div>
+            <div class="ln-form-description">
+                <div class="field-description-form-buy">
+                    <label for="thanks" class="lb-form-buy">Special thanks:</label>
+                </div>
+                <div class="field-input-form-buy">
+                    <input type="text" name="thanks" id="thanks" class="input-form-buy">
+                </div>
+            </div>
+            <div class="ln-form-description">
+                <div class="field-description-form-buy">
+                    <label for="additonal_preferences" class="lb-form-buy">Any additional preferences:</label>
+                </div>
+                <div class="field-input-form-buy">
+                    <input type="text" name="additonal_preferences" id="additonal_preferences" class="input-form-buy">
+                </div>
+            </div>
+            <div class="ln-form-description">
+                <div class="field-description-form-buy">
+                    <label for="dos_donts" class="lb-form-buy">Do's and Don'ts</label>
+                </div>
+                <div class="field-input-form-buy">
+                    <input type="text" name="dos_donts" id="dos_donts" class="input-form-buy">
+                </div>
+            </div>
+            <div class="ln-form-description">
+                <div class="field-description-form-buy">
+                    <label for="attendees" class="lb-form-buy">Number of attendees(approximately):</label>
+                </div>
+                <div class="field-input-form-buy">
+                    <input type="text" name="attendees" id="attendees" class="input-form-buy">
+                </div>
+            </div>
+            <div class="ln-form-description">
+                <div class="field-description-form-buy">
+                    <label for="ages" class="lb-form-buy">Age range of the audience(approximately):</label>
+                </div>
+                <div class="field-input-form-buy">
+                    <input type="text" name="ages" id="ages" class="input-form-buy">
+                </div>
+            </div>
+            <div class="ln-form-description">
+                <div class="field-description-form-buy">
+                    <label class="lb-form-buy">Tone of the speech:</label>
+                </div>
+                <div class="checkbox-form-buy">
+                    <input type="checkbox" name="tone_emotional" value="emotional" id="tone_emotional">
+                    <label for="tone_emotional">Emotional</label><br>
+                    
+                    <input type="checkbox" name="tone_heartfelt" value="heartfelt" id="tone_heartfelt">
+                    <label for="tone_heartfelt">Heartfelt</label><br>
+
+                    <input type="checkbox" name="tone_inspirational" value="inspirational" id="tone_inspirational">
+                    <label for="tone_inspirational">Inspirational</label><br>
+
+                    <input type="checkbox" name="tone_happy" value="happy" id="tone_happy">
+                    <label for="tone_happy">Happy</label><br>
+
+                    <input type="checkbox" name="tone_funny" value="funny" id="tone_funny">
+                    <label for="tone_funny">Funny</label><br>
+
+                    <input type="checkbox" name="tone_formal" value="formal" id="tone_formal">
+                    <label for="tone_formal">Formal</label><br>
+
+                    <input type="checkbox" name="tone_casual" value="casual" id="tone_casual">
+                    <label for="tone_casual">Casual</label><br>
+
+                    <input type="checkbox" name="tone_motivational" value="motivational" id="tone_motivational">
+                    <label for="tone_motivational">Motivational</label><br>
+
+                    <input type="checkbox" name="tone_reflective" value="reflective" id="tone_reflective">
+                    <label for="tone_reflective">Reflective</label><br>
+
+                    <div class="field-description-form-buy">
+                        <label for="tone_others" class="lb-form-buy">Others:</label>
+                    </div>
+                    <div class="field-input-form-buy">
+                        <input type="text" name="tone_others" id="tone_others" class="input-form-buy">
+                    </div>                
+                </div>
+            </div>
+            <div class="ln-form-description">
+                <div class="field-description-form-buy">
+                    <label for="user_input" class="lb-form-buy">Final points:</label>
+                </div>
+                <div class="field-input-form-buy">
+                    <input  type="text" name="user_input" id="user-input" class="input-form-buy" 
+                    placeholder="Main points you want to cover
+                    Specific anecdotes or stories to include 
+                    Quoter and references to include 
+                    Any particular message or takeaway you want the audience to remember">
+                </div>
+            </div>
+            <input type="submit" value="" class="btn btn-buy">
+        </form>
+    </div>
+</div>
+
+{% endblock %}
