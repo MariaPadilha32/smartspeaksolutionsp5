@@ -261,3 +261,33 @@ def retirements(request):
     else:
         # Handle GET request or invalid form submission
         return HttpResponse('Invalid request!')
+
+
+def occasions(request):
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        occasion = request.POST.get('occasion')
+        date = request.POST.get('date')
+        speech_length = request.POST.get('speech_length')
+        mentions = request.POST.get('mentions')
+        thanks = request.POST.get('thanks')
+        additonal_preferences = request.POST.get('additonal_preferences')
+        dos_donts = request.POST.get('dos_donts')
+        attendees = request.POST.get('attendees')
+        tone_emotional = request.POST.get('tone_emotional')
+        tone_heartfelt = request.POST.get('tone_heartfelt')
+        tone_inspirational = request.POST.get('tone_inspirational')
+        tone_happy = request.POST.get('tone_happy')
+        tone_funny = request.POST.get('tone_funny')
+        tone_formal = request.POST.get('tone_formal')
+        tone_casual = request.POST.get('tone_casual')
+        tone_motivational = request.POST.get('tone_motivational')
+        tone_reflective = request.POST.get('tone_reflective')
+        tone_others = request.POST.get('tone_others')
+        user_input = request.POST.get('user_input')
+
+        return HttpResponse('Form submitted successfully!')
+    else:
+        # Handle GET request or invalid form submission
+        return HttpResponse('Invalid request!')

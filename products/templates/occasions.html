@@ -4,26 +4,27 @@
 
 {% block corejs %}{% endblock %}
 
-{% block extra_title %}Special Birthdays{% endblock %}
+{% block extra_title %}Special Occasion{% endblock %}
 
 {% block content %}
 <div class="description">
     <div class="title-description">
-        <span class="value-title-description">Special Birthdays</span>
+        <span class="value-title-description">Special Occasion</span>
     </div>
     <div class="image-description">
         <div class="picture-description">
-            <img src="{% static 'retirements.jpg' %}" alt="A birthday cake" class="value-picture-description">
+            <img src="{% static 'confirmaions.jpg' %}" alt="A girl holding a candle" class="value-picture-description">
         </div>
         <div class="controls-description">
             <button class="btn btn-buy"></button>
         </div>
     </div>
     <div class="detail-description">
-        <p class="value-detail-description">A milestone birthday is a perfect occasion to celebrate a loved one’s
-             life and achievements. Our special birthday speechwriting service helps you craft a speech that 
-             highlights cherished memories, significant milestones, and heartfelt wishes for the future. 
-             We ensure your speech is touching, joyful, and perfectly suited to the occasion.
+        <p class="value-detail-description">Other Occasions (Baptism, Confirmation, Engagement, Milestones, Political, etc.)<br>
+            Life’s special moments deserve words that truly capture their significance. Whether it’s a baptism, 
+            confirmation, engagement, or other milestone, our speechwriting service ensures your message is 
+            thoughtful, eloquent, and impactful. We tailor each speech to the occasion, helping you celebrate 
+            and honor these meaningful events with the perfect words.
         </p>
         <p class="value-detail-description">- Speech will be delivered within 5 working days.
             <br>
@@ -67,9 +68,9 @@
         </div>
     </div>
     <div class="form-description">
-        <form action="{% url 'retirements' %}" method="post" class="form-buy">
+        <form action="{% url 'occasions' %}" method="post" class="form-buy">
             {% csrf_token %}
-            <input type="hidden" name="page" value="retirements">
+            <input type="hidden" name="page" value="occasions">
             <div class="ln-form-description">
                 <div class="field-description-form-buy">
                     <label for="text-name" class="lb-form-buy">Name:</label>
@@ -88,31 +89,15 @@
             </div>
             <div class="ln-form-description">
                 <div class="field-description-form-buy">
-                    <label for="retired" class="lb-form-buy">Who is retiring:</label>
+                    <label for="occasion" class="lb-form-buy">What is the occasion:</label>
                 </div>
                 <div class="field-input-form-buy">
-                    <input type="text" name="retired" id="retired" class="input-form-buy" required>
+                    <input type="text" name="occasion" id="occasion" class="input-form-buy" required>
                 </div>
             </div>
             <div class="ln-form-description">
                 <div class="field-description-form-buy">
-                    <label for="company_name" class="lb-form-buy">Company name:</label>
-                </div>
-                <div class="field-input-form-buy">
-                    <input type="text" name="company_name" id="company_name" class="input-form-buy" required>
-                </div>
-            </div>
-            <div class="ln-form-description">
-                <div class="field-description-form-buy">
-                    <label for="years" class="lb-form-buy">Years in the company:</label>
-                </div>
-                <div class="field-input-form-buy">
-                    <input type="text" name="years" id="years" class="input-form-buy" required>
-                </div>
-            </div>
-            <div class="ln-form-description">
-                <div class="field-description-form-buy">
-                    <label for="date" class="lb-form-buy">Date of the party:</label>
+                    <label for="date" class="lb-form-buy">Date of the occasion:</label>
                 </div>
                 <div class="field-input-form-buy">
                     <input type="date" name="date" id="date" class="input-form-buy" required>
