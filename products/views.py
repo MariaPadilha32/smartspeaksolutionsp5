@@ -34,15 +34,15 @@ def eulogy(request):
         return HttpResponse('Form submitted successfully!')
     else:
         # Handle GET request or invalid form submission
-        return render(request, 'templates/eulogy.html')
+        return render(request, 'eulogy.html')
 
 
 def vows(request):
     if request.method == 'POST':
         name = request.POST.get('name')
         email = request.POST.get('email')
-        partner-name = request.POST.get('partner_name')
-        wedding-date = request.POST.get('wedding_date')
+        partner_name = request.POST.get('partner_name')
+        wedding_date = request.POST.get('wedding_date')
         speech_length = request.POST.get('speech_length')
         history = request.POST.get('history')
         dos_donts = request.POST.get('dos_donts')
@@ -71,8 +71,8 @@ def spouse(request):
     if request.method == 'POST':
         name = request.POST.get('name')
         email = request.POST.get('email')
-        partner-name = request.POST.get('partner_name')
-        wedding-date = request.POST.get('wedding_date')
+        partner_name = request.POST.get('partner_name')
+        wedding_date = request.POST.get('wedding_date')
         speech_length = request.POST.get('speech_length')
         history = request.POST.get('history')
         mentions = request.POST.get('mentions')
