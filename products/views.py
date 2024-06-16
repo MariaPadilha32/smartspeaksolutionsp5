@@ -64,7 +64,7 @@ def vows(request):
         return HttpResponse('Form submitted successfully!')
     else:
         # Handle GET request or invalid form submission
-        return HttpResponse('Invalid request!')
+        return render(request, 'vows.html')
 
 
 def spouse(request):
