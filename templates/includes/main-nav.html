@@ -1,30 +1,30 @@
 <div class="collapse navbar-collapse background-bg-head" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
         <li class="nav-item dropdown item-dropdown">
-            <a class="logo-font font-weight-bold nav-link text-whitemr-5" href="#" id="clothing-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link text-whitemr-5" href="{% url 'eulogy' %}" id="eulogies" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Eulogies
             </a>
         </li>
         <li class="nav-item dropdown item-dropdown">
-            <a class="logo-font font-weight-bold nav-link text-white mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link text-white mr-5" href="#" id="weddingservices" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Weddings
             </a>
             <div class="dropdown-menu bg-transparent text-gold border-0" aria-labelledby="all-products-link">
-                <a href="#" class="dropdown-item">Spouse's speech</a>
-                <a href="#" class="dropdown-item">Parent of the Groom/Bride Speeches</a>
-                <a href="#" class="dropdown-item">Wedding Party Speeches</a>
-                <a href="#" class="dropdown-item">Wedding Vows</a>
+                <a href="{% url 'spouse' %}" class="dropdown-item">Spouse's speech</a>
+                <a href="{% url 'parent' %}" class="dropdown-item">Parent of the Groom/Bride Speeches</a>
+                <a href="{% url 'weddingparty' %}" class="dropdown-item">Wedding Party Speeches</a>
+                <a href="{% url 'vows' %}" class="dropdown-item">Wedding Vows</a>
             </div>
         </li>
         <li class="nav-item dropdown item-dropdown">
-            <a class="logo-font font-weight-bold nav-link text-white mr-5" href="#" id="homeware-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link text-white mr-5" href="#" id="specialoccasions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Special Ocasions
             </a>
             <div class="dropdown-menu bg-transparent text-gold border-0" aria-labelledby="homeware-link">
-                <a href="#" class="dropdown-item">Anniversaries</a>
-                <a href="#" class="dropdown-item">Retirements</a>
-                <a href="#" class="dropdown-item">Special Birthdays</a>
-                <a href="#" class="dropdown-item">Other Ocasions</a>
+                <a href="{% url 'anniversary' %}" class="dropdown-item">Anniversaries</a>
+                <a href="{% url 'retirements' %}" class="dropdown-item">Retirements</a>
+                <a href="{% url 'birthday' %}" class="dropdown-item">Special Birthdays</a>
+                <a href="{% url 'occasions' %}" class="dropdown-item">Other Ocasions</a>
             </div>
         </li>
 
