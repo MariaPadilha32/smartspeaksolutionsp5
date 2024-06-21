@@ -10,7 +10,7 @@ urlpatterns = [
     path('weddingparty/', views.weddingparty, name='weddingparty'),
     path('anniversary/', views.anniversary, name='anniversary'),
     path('birthday/', views.birthday, name='birthday'),
-    path('retirements/', views.birthday, name='retirements'),
+    path('retirements/', views.retirements, name='retirements'),
     path('occasions/', views.occasions, name='occasions'),
     path('', views.index, name='products'),
 ]
