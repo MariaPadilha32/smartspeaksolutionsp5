@@ -20,3 +20,6 @@ def custom_403_view(request, exception):
     Http Error Handler 403 - Forbidden Error 
     """
     return render(request, "error/403.html", status=403)
+
+def blog(request):
+    return render(request, 'blog.htm', {})
