@@ -155,7 +155,7 @@ footer {
 }
 
 .social-icon{
-    color: var(--color-gold);
+    fill: var(--color-gold);
 }
 
 .bi{
