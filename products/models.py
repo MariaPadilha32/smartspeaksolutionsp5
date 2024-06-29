@@ -4,7 +4,10 @@ from django.db import models
 class Product(models.Model):
 
     name = models.CharField(max_length=300, null=False, blank=False)
+    image = models.URLField(max_length=1024, null=True, blank=True)
     detail = models.TextField(null=False, blank=False)
+    rule = models.TextField(null=False, blank=False)
+    price = models.TextField(null=False, blank=False)
 
     def __str__(self):
         return self.name
@@ -235,40 +238,6 @@ class Birthday(models.Model):
 
     class Meta:
         db_table = "birthday"
-
-
-class Birthday(models.Model):
-    name = models.CharField(max_length=50, blank=False, null=False)
-    email = models.CharField(max_length=100, blank=True, null=True)
-    birthday_person = models.CharField(max_length=50, blank=False, null=False)
-    milestone = models.CharField(max_length=50, blank=False, null=False)
-    birthday = models.CharField(max_length=50, blank=False, null=False)
-    speech_length = models.CharField(max_length=50, blank=False, null=False)
-    history = models.TextField(blank=True, null=True)
-    mentions = models.TextField(blank=True, null=True)
-    thanks = models.TextField(blank=True, null=True)
-    additonal_preferences = models.TextField(blank=True, null=True)
-    dos_donts = models.TextField(blank=True, null=True)
-    attendees = models.CharField(max_length=50, blank=True, null=True)
-    ages = models.CharField(max_length=50, blank=True, null=True)
-    tone_emotional = models.BooleanField(default=False)
-    tone_heartfelt = models.BooleanField(default=False)
-    tone_inspirational = models.BooleanField(default=False)
-    tone_happy = models.BooleanField(default=False)
-    tone_funny = models.BooleanField(default=False)
-    tone_formal = models.BooleanField(default=False)
-    tone_casual = models.BooleanField(default=False)
-    tone_motivational = models.BooleanField(default=False)
-    tone_reflective = models.BooleanField(default=False)
-    tone_others = models.CharField(max_length=100, blank=True, null=True)
-    user_input = models.TextField(blank=True, null=True)
-
-    def __str__(self):
-        return self.name
-
-    class Meta:
-        db_table = "birthday"
-
 
 class Retirements(models.Model):
     name = models.CharField(max_length=50, blank=False, null=False)
